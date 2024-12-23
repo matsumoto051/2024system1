@@ -1,0 +1,10 @@
+@startuml
+actor User
+Participant WebApp as "Webアプリ"
+participant AuthServer as "認証サーバー"
+
+User -> WebApp:認証情報を入力
+WebApp -> AuthServer:認証情報を送信
+AuthServer --> WebApp:認証結果を返す
+WebApp --> User:ログイン成功メッセージ
+@enduml
